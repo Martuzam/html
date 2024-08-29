@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Criação de Usuários</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #999;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.icon svg {
+  width: 50px;
+  height: 50px;
+  fill: #666;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group > div {
+  width: 48%;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="close" onclick="closePopup()">X</div>
+  <h2>Criação de Usuários</h2>
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H7V5h10v16zm-8-9.5l-1.5 1.5L9 15l3-3L15.5 11.5l-1.5-1.5z"/></svg>
+  </div>
+  <form>
+    <div class="form-group">
+      <div>
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome completo">
+      </div>
+      <div>
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuário">
+      </div>
+    </div>
+    <div class="form-group">
+      <div>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+      </div>
+      <div>
+        <label for="tipo">Tipo de Usuário:</label>
+        <select id="tipo" name="tipo">
+          <option value="usuario">Usuário</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div>
+        <label for="setor">Setor:</label>
+        <input type="text" id="setor" name="setor" placeholder="Setor">
+      </div>
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="button-group">
+      <button type="button" onclick="closePopup()">Excluir</button>
+      <button type="submit">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<script>
+function closePopup() {
+  document.body.removeChild(document.querySelector(".container"));
+}
+</script>
+
+</body>
+</html>
